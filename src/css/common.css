@@ -1,0 +1,110 @@
+:root {
+  --primary-light-color: rgb(255, 216, 121);
+  --primary-dark-color: rgb(24, 18, 8);
+  --secondary-dark-color: #140e05;
+}
+
+/* playpen-sans-500 - greek_latin_latin-ext_math */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Playpen Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/playpen-sans-v22-greek_latin_latin-ext_math-500.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--primary-dark-color);
+  color: var(--primary-light-color);
+  font-family: "Playpen Sans";
+}
+
+h1 {
+  font-size: 2.625rem;
+}
+
+a {
+  color: var(--primary-light-color);
+  text-decoration: none;
+  :hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background: var(--primary-light-color);
+}
+
+.subtext {
+  opacity: 80%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 auto;
+  align-items: center;
+  justify-content: start;
+  margin: 0;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-dark-color);
+  display: flex;
+  justify-content: flex-end;
+  a {
+    display: block;
+    color: var(--primary-light-color);
+    padding: 1.5rem 2rem;
+    text-decoration: none;
+  }
+
+  .dropdown {
+    float: right;
+    position: relative;
+    overflow: visible;
+
+    .dropdown-button {
+      font-size: inherit;
+      border: none;
+      outline: none;
+      color: inherit;
+      background-color: inherit;
+      font-family: inherit;
+      padding: 1.5rem 2rem;
+      white-space: nowrap;
+      a {
+        padding: 0;
+      }
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      z-index: 1;
+      background-color: var(--secondary-dark-color);
+      text-align: right;
+
+      a {
+        padding: 0.5rem 2rem;
+      }
+    }
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}

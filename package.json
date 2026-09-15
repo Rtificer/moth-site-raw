@@ -1,0 +1,10 @@
+{
+  "name": "site-build",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node watch.js"
+  }
+}

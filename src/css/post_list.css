@@ -1,0 +1,46 @@
+.posts {
+  width: 100%;
+  max-width: 1e3px;
+  text-align: left;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.posts-group {
+  display: flex;
+}
+
+.post-year {
+  padding-top: 0.25rem;
+  margin-right: 1.8rem;
+  font-size: 1.6rem;
+}
+
+.posts-list {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-item {
+  border-bottom: 1px solid var(--primary-light-color);
+}
+
+.post-item-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 0;
+  text-decoration: none;
+}
+
+.post-title {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.post-day {
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
