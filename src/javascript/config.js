@@ -1,0 +1,1 @@
+const CONTENT_BASE = 'https://<user>.github.io/<repo>/';
