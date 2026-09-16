@@ -17,6 +17,8 @@ async function loadPost() {
   const slug = new URLSearchParams(location.search).get('slug');
   try {
     const res = await fetch(`${CONTENT_BASE}posts/${slug}.md`);
+    if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+
     const raw = await res.text();
     const { meta, content } = parseFrontmatter(raw);
 
