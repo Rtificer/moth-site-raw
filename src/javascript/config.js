@@ -1,1 +1,1 @@
-const CONTENT_BASE = 'https://<user>.github.io/<repo>/';
+const CONTENT_BASE = 'https://rtificer.github.io/moth-site-raw/';
