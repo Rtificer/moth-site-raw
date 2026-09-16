@@ -1,19 +1,22 @@
 async function loadPostList() {
-    const res = await fetch('posts/index.json');
-    const posts = await res.json();
+    try {
+        const res = await fetch(`${CONTENT_BASE}posts/index.json`);
+        if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
 
-    // group by year
-    const byYear = {};
-    posts.forEach(p => {
-        const year = p.date.slice(0,4);
-        (byYear[year] ??= []).push(p);
-    });
+        const posts = await res.json();
 
-    const container = document.getElementById('post-list');
-    Object.keys(byYear).sort().reverse().forEach(year => {
-        const group = document.createElement('div');
-        group.className = 'post-group';
-        group.innerHTML = `
+        // group by year
+        const byYear = {};
+        posts.forEach(p => {
+            const year = p.date.slice(0, 4);
+            (byYear[year] ??= []).push(p);
+        });
+
+        const container = document.getElementById('post-list');
+        Object.keys(byYear).sort().reverse().forEach(year => {
+            const group = document.createElement('div');
+            group.className = 'post-group';
+            group.innerHTML = `
             <div class="post-year subtext">${year}</div>
             <ul class="posts-list">
                 ${byYear[year].map(p => `
@@ -24,8 +27,12 @@ async function loadPostList() {
                         </a>
                 </li>`).join('')}
             </ul>`;
-        container.appendChild(group);
-    })
+            container.appendChild(group);
+        })
+    } catch (err) {
+        console.error('Failed to load post list:', err);
+        document.getElementById('post-list').textContent = 'Could not load posts.';
+    }
 }
 
 function formatDay(dateStr) {

@@ -15,29 +15,35 @@ function parseFrontmatter(raw) {
 
 async function loadPost() {
   const slug = new URLSearchParams(location.search).get('slug');
-  const res = await fetch(`${CONTENT_BASE}posts/${slug}.md`);
-  const raw = await res.text();
-  const { meta, content } = parseFrontmatter(raw);
+  try {
+    const res = await fetch(`${CONTENT_BASE}posts/${slug}.md`);
+    const raw = await res.text();
+    const { meta, content } = parseFrontmatter(raw);
 
-  document.title = meta.title;
-  document.getElementById('post-title').textContent = meta.title;
-  document.getElementById('post-content').innerHTML = marked.parse(content);
+    document.title = meta.title;
+    document.getElementById('post-title').textContent = meta.title;
+    document.getElementById('post-content').innerHTML = marked.parse(content);
 
-  // word count + date, matching post_info.html
-  const words = content.trim().split(/\s+/).length;
-  document.querySelector('#word-count').textContent = `${words} words`;
-  document.querySelector('#post-date').textContent = meta.date;
+    // word count + date, matching post_info.html
+    const words = content.trim().split(/\s+/).length;
+    document.querySelector('#word-count').textContent = `${words} words`;
+    document.querySelector('#post-date').textContent = meta.date;
 
-   // rewrite relative image paths to the GitHub Pages host
-  document.querySelectorAll('#post-content img').forEach(img => {
-    const src = img.getAttribute('src');
-    if (src && !/^([a-z]+:)?\/\//i.test(src)) {
-      img.src = `${CONTENT_BASE}posts/${src}`;
-    }
-  });
+    // rewrite relative image paths to the GitHub Pages host
+    document.querySelectorAll('#post-content img').forEach(img => {
+      const src = img.getAttribute('src');
+      if (src && !/^([a-z]+:)?\/\//i.test(src)) {
+        img.src = `${CONTENT_BASE}posts/${src}`;
+      }
+    });
 
-  // syntax highlighting
-  document.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
+    // syntax highlighting
+    document.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
+
+  } catch (err) {
+    console.error('Failed to load post!', err);
+    document.getElementById('post-title').textContent = 'Could not load post!';
+  }
 }
 
 loadPost();
