@@ -118,8 +118,12 @@ function buildPosts() {
 
     if (!meta.title || !meta.date) {
       console.warn(
-        `  Warning: "${file}" is missing title/date frontmatter, skipping from index`,
+        `  Warning: "${file}" is missing title/date/hidden frontmatter, skipping from index`,
       );
+      continue;
+    }
+
+    if (meta.hidden === "true") {
       continue;
     }
 
