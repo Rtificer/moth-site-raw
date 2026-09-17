@@ -2,6 +2,14 @@
   --primary-light-color: rgb(255, 216, 121);
   --primary-dark-color: rgb(24, 18, 8);
   --secondary-dark-color: #140e05;
+  --code-bg-color: #24273a;
+}
+
+/* fix really annoying overflow errors */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* playpen-sans-500 - greek_latin_latin-ext_math */
@@ -71,17 +79,16 @@ hr {
   }
 
   .dropdown {
-    float: right;
     position: relative;
+    display: inline-block;
     overflow: visible;
 
     .dropdown-button {
-      font-size: inherit;
+      font: inherit;
       border: none;
       outline: none;
       color: inherit;
       background-color: inherit;
-      font-family: inherit;
       padding: 1.5rem 2rem;
       white-space: nowrap;
       a {
@@ -107,4 +114,30 @@ hr {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .navbar a,
+  .navbar .dropdown .dropdown-button {
+    padding: 1.5rem 1rem;
+  }
+
+  .navbar .dropdown-content a {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
 }

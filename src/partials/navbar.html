@@ -4,18 +4,44 @@
   <li><a href="blog.html">blog</a></li>
   <li>
     <div class="dropdown">
-      <button class="dropdown-button">
-        <a href="https://www.massacademy.org">mass academy</a>
+      <button
+        class="dropdown-button"
+        type="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        mass academy
       </button>
       <div class="dropdown-content">
-        <a href="mass_academy/humanities.html">humanities</a>
-        <a href="#physics">physics</a>
-        <a href="#spanish">spanish</a>
-        <a href="#stem1">stem1</a>
-        <a href="#stem2">stem2</a>
-        <a href="#math">math</a>
-        <a href="#cs">cs</a>
+        <a href="https://www.massacademy.org">mass academy site ↗</a>
+        <a href="post.html?slug=humanities">humanities</a>
+        <a href="post.html?slug=physics">physics</a>
+        <a href="post.html?slug=spanish">spanish</a>
+        <a href="post.html?slug=stem_1">stem I</a>
+        <a href="post.html?slug=stem_2">stem II</a>
+        <a href="post.html?slug=math">math</a>
+        <a href="post.html?slug=cs">cs</a>
       </div>
     </div>
+
+    <script>
+      (() => {
+        const dropdown = document.querySelector(".dropdown");
+        const button = dropdown.querySelector(".dropdown-button");
+
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const isOpen = dropdown.classList.toggle("open");
+          button.setAttribute("aria-expanded", isOpen);
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("open");
+            button.setAttribute("aria-expanded", false);
+          }
+        });
+      })();
+    </script>
   </li>
 </ul>
