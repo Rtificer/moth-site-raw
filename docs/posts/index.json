@@ -6,47 +6,47 @@
   },
   {
     "slug": "06-01-26",
-    "title": "\"BNO055, Custom AHT20 driver, HTTP server, and WebRTC connection, and a vendor package with Cmake wizardry\"",
+    "title": "BNO055, Custom AHT20 driver, HTTP server, and WebRTC connection, and a vendor package with Cmake wizardry",
     "date": "2026-06-01"
   },
   {
     "slug": "05-22-26",
-    "title": "\"starting ROS, project management\"",
+    "title": "starting ROS, project management",
     "date": "2026-05-22"
   },
   {
     "slug": "03-27-26",
-    "title": "\"dshot timer setup\"",
+    "title": "dshot timer setup",
     "date": "2026-03-27"
   },
   {
     "slug": "03-23-26",
-    "title": "\"Finished RX DMA Setup and Interrupt, Set Hardware NSS\"",
+    "title": "Finished RX DMA Setup and Interrupt, Set Hardware NSS",
     "date": "2026-03-23"
   },
   {
     "slug": "03-13-26",
-    "title": "\"more register-level STM32: SPI, DMA, DShot\"",
+    "title": "more register-level STM32: SPI, DMA, DShot",
     "date": "2026-03-13"
   },
   {
     "slug": "03-06-26",
-    "title": "\"ESC specification mistakes, correcting r & d, register-level STM32 motor controller implementation\"",
+    "title": "ESC specification mistakes, correcting r & d, register-level STM32 motor controller implementation",
     "date": "2026-03-06"
   },
   {
     "slug": "02-02-26",
-    "title": "\"jellyfin server, tailscale, caddy reverse proxy, motor controller success and subsequent re-write\"",
+    "title": "jellyfin server, tailscale, caddy reverse proxy, motor controller success and subsequent re-write",
     "date": "2026-02-02"
   },
   {
     "slug": "01-16-26",
-    "title": "\"temporary switch from SPI to I2C, more math, logic analyzer\"",
+    "title": "temporary switch from SPI to I2C, more math, logic analyzer",
     "date": "2026-01-16"
   },
   {
     "slug": "01-08-26",
-    "title": "\"new site, integration, debugging rust PAC-level SPI peripheral and RP2040 PIO implementations, and raw TCP communication\"",
+    "title": "new site, integration, debugging rust PAC-level SPI peripheral and RP2040 PIO implementations, and raw TCP communication",
     "date": "2026-01-08"
   }
 ]
