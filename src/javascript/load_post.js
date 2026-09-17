@@ -37,6 +37,10 @@ async function loadPost() {
       if (src && !/^([a-z]+:)?\/\//i.test(src)) {
         img.src = `${CONTENT_BASE}posts/${src}`;
       }
+      img.onerror = () => {
+        img.alt = `Image failed to load: ${img.src}`;
+        img.style.border = "2px dashed red";
+      };
     });
 
     // syntax highlighting
