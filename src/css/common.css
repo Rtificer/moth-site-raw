@@ -39,9 +39,10 @@ h1 {
 a {
   color: var(--primary-light-color);
   text-decoration: none;
-  :hover {
-    text-decoration: underline;
-  }
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 hr {
@@ -71,49 +72,51 @@ hr {
   background-color: var(--secondary-dark-color);
   display: flex;
   justify-content: flex-end;
-  a {
-    display: block;
-    color: var(--primary-light-color);
-    padding: 1.5rem 2rem;
-    text-decoration: none;
-  }
+}
 
-  .dropdown {
-    position: relative;
-    display: inline-block;
-    overflow: visible;
+.navbar a {
+  display: block;
+  color: var(--primary-light-color);
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+}
 
-    .dropdown-button {
-      font: inherit;
-      border: none;
-      outline: none;
-      color: inherit;
-      background-color: inherit;
-      padding: 1.5rem 2rem;
-      white-space: nowrap;
-      a {
-        padding: 0;
-      }
-    }
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 100%;
-      z-index: 1;
-      background-color: var(--secondary-dark-color);
-      text-align: right;
+.navbar .dropdown .dropdown-button {
+  font: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+  background-color: inherit;
+  padding: 1.5rem 2rem;
+  white-space: nowrap;
+}
 
-      a {
-        padding: 0.5rem 2rem;
-      }
-    }
-  }
+.navbar .dropdown .dropdown-button a {
+  padding: 0;
+}
 
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+.navbar .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: var(--secondary-dark-color);
+  text-align: right;
+}
+
+.navbar .dropdown .dropdown-content a {
+  padding: 0.5rem 2rem;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
 }
 
 @media (max-width: 600px) {
@@ -133,11 +136,11 @@ hr {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .dropdown:hover .dropdown-content {
+  .navbar .dropdown:hover .dropdown-content {
     display: block;
   }
 }
 
-.dropdown.open .dropdown-content {
+.navbar .dropdown.open .dropdown-content {
   display: block;
 }

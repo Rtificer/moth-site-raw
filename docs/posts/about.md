@@ -12,7 +12,7 @@ I have broad interest across many subjects, but have historically pursued underw
 
 Currently we're working on a tethered ROV with a 500 meter operating depth. This has been a great challenge, not only from a mechanical design perspective, but also electrical in delivering that power from the surface, and software, in regards to obtaining accurate positional information.
 
-Here's a picture of me working on some small soldering for a custom BD-DShot 1200 motor controller
+Here's a picture of me working on some small soldering for a custom [BD-DShot 1200](https://brushlesswhoop.com/dshot-and-bidirectional-dshot/) motor controller
 
 ![digital microscope chip](images/about/solder_closeup.webp)
 

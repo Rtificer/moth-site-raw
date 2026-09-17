@@ -12,40 +12,40 @@ body.home-page {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
 
-  h1 {
-    line-height: 1;
-    margin: 0;
-  }
+.home-island h1 {
+  line-height: 1;
+  margin: 0;
 }
 
 .social-icons {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+}
 
-  a {
-    display: block;
-  }
+.social-icons a {
+  display: block;
+}
 
-  svg {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+.social-icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 
-  .github {
-    fill: none;
-    stroke: var(--primary-light-color);
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
+.social-icons .github {
+  fill: none;
+  stroke: var(--primary-light-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
-  .linkden {
-    fill: var(--primary-light-color);
-  }
+.social-icons .linkden {
+  fill: var(--primary-light-color);
+}
 
-  .pronouns-page {
-    fill: var(--primary-light-color);
-  }
+.social-icons .pronouns-page {
+  fill: var(--primary-light-color);
 }
