@@ -14,7 +14,7 @@ Currently we're working on a tethered ROV with a 500 meter operating depth. This
 
 Here's a picture of me working on some small soldering for a custom BD-DShot 1200 motor controller
 
-![digital microscope chip](images/about/solder_closeup.webpp)
+![digital microscope chip](images/about/solder_closeup.webp)
 
 I also historically have participated extensively in student government. I served as a student representative to Medford School committee, as well as to regional and state-level assemblies. I spearheaded an effort to add a 7th period to the school day, which enabled vocation students who attend their shop half of the day to take their desired higher-level classes. Fellow representatives and I also reformed student demonstration policy, and overhauled the transportation system, allowing buses to reach more students for the same cost.
 
