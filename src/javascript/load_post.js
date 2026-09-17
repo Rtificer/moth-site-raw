@@ -49,7 +49,8 @@ async function loadPost() {
       .forEach((block) => hljs.highlightElement(block));
   } catch (err) {
     console.error("Failed to load post!", err);
-    document.getElementById("post-title").textContent = "Could not load post!";
+    document.getElementById("post-title").textContent =
+      "Could not load post! (did the content fetch time out?)";
   }
 }
 

@@ -5,6 +5,31 @@
   --code-bg-color: #24273a;
 }
 
+::selection {
+  background-color: var(--primary-light-color);
+  color: var(--primary-dark-color);
+}
+::-moz-selection {
+  background-color: var(--primary-light-color);
+  color: var(--primary-dark-color);
+}
+
+pre::selection,
+pre *::selection,
+code::selection,
+code *::selection {
+  background-color: revert;
+  color: revert;
+}
+
+pre::-moz-selection,
+pre *::-moz-selection,
+code::-moz-selection,
+code *::-moz-selection {
+  background-color: revert;
+  color: revert;
+}
+
 /* fix really annoying overflow errors */
 *,
 *::before,
